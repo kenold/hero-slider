@@ -27,15 +27,16 @@ const dots = document.querySelector("#dots-list");
 document.addEventListener("DOMContentLoaded", () => {
 
     // load the first item
-    let position = 0;
+    let index = 0;
 
-    // call the setData function and pass position as a param
-    setData(position);
+    // call the setData function and pass index as a param
+    setData(index);
 
 });
 
-function setData(position) {
-    const post = data[position];
+function setData(index) {
+    // get the post with index 'index'
+    const post = data[index];
 
     // set the image url prefix and size
     const imgPrefix = "https://source.unsplash.com";
