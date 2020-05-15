@@ -1,4 +1,4 @@
-const data = [{
+const posts = [{
         title: "PDX Women in tech scholarships go all virtual",
         image: "zrEkb4ILymM",
         imageAlt: "Woman in holding a laptop with stickers",
@@ -36,7 +36,7 @@ document.addEventListener("DOMContentLoaded", () => {
 
 function setData(index) {
     // get the post with index 'index'
-    const post = data[index];
+    const post = posts[index];
 
     // set the image url prefix and size
     const imgPrefix = "https://source.unsplash.com";
