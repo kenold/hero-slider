@@ -1,6 +1,7 @@
 const data = [{
         title: "PDX Women in tech scholarships go all virtual",
         image: "zrEkb4ILymM",
+        imageAlt: "Woman in holding a laptop with stickers",
         category: "React",
         cta: "Explore more",
         url: "https://google.com"
@@ -8,6 +9,7 @@ const data = [{
     {
         title: "Women in tech face the challenge of not being taken seriously",
         image: "fch6vkbouCc",
+        imageAlt: "Woman typing on a laptop with multiple screen",
         category: "Javascript",
         cta: "Find out more",
         url: "https://github.com"
