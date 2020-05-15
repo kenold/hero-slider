@@ -1,7 +1,7 @@
 const posts = [{
         title: "PDX Women in tech scholarships go all virtual",
         image: "zrEkb4ILymM",
-        imageAlt: "Woman in holding a laptop with stickers",
+        imageAlt: "Woman holding a laptop with stickers",
         category: "React",
         cta: "Explore more",
         url: "https://google.com"
@@ -68,6 +68,7 @@ function setData(index) {
     const imgSize = "720x576";
 
     photo.style.background = `url(${imgPrefix}/${post.image}/${imgSize}) no-repeat center center`;
+    photo.setAttribute("aria-label", post.imageAlt);
     category.innerText = post.category;
     title.innerText = post.title;
     cta.innerText = post.cta;
