@@ -22,3 +22,28 @@ const category = document.querySelector(".card__category");
 const title = document.querySelector(".card__title");
 const cta = document.querySelector(".card__cta-link");
 const dots = document.querySelector("#dots-list");
+
+// when DOM is done loading
+document.addEventListener("DOMContentLoaded", () => {
+
+    // load the first item
+    let position = 0;
+
+    // call the setData function and pass position as a param
+    setData(position);
+
+});
+
+function setData(position) {
+    const post = data[position];
+
+    // set the image url prefix and size
+    const imgPrefix = "https://source.unsplash.com";
+    const imgSize = "720x576";
+
+    photo.style.background = `url(${imgPrefix}/${post.image}/${imgSize}) no-repeat center center`;
+    category.innerText = post.category;
+    title.innerText = post.title;
+    cta.innerText = post.cta;
+    cta.href = post.url;
+}
