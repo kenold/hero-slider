@@ -32,8 +32,12 @@ document.addEventListener("DOMContentLoaded", () => {
     // call the setData function and pass index as a param
     setData(index);
 
+    // create the dots
+    createDots();
+
 });
 
+// FUNCTIONS
 function setData(index) {
     // get the post with index 'index'
     const post = posts[index];
@@ -47,4 +51,18 @@ function setData(index) {
     title.innerText = post.title;
     cta.innerText = post.cta;
     cta.href = post.url;
+}
+
+// create the dots indicators
+function createDots() {
+    for (let i = 0; i < posts.length; i++) {
+        const li = document.createElement("li");
+        li.classList.add("dot");
+        // add the active class to the first element
+        if (i == 0) {
+            li.classList.add("active");
+        }
+        li.setAttribute("data-index", i);
+        dots.appendChild(li);
+    }
 }
