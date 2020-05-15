@@ -35,6 +35,27 @@ document.addEventListener("DOMContentLoaded", () => {
     // create the dots
     createDots();
 
+    // DOTS EVEN HANDLER
+    // get all the dots
+    const dotItems = dots.querySelectorAll(".dot");
+
+    // add a click event to each dot
+    dotItems.forEach((dot) => {
+        dot.addEventListener("click", function (e) {
+            //remove the 'active' class from all the dots
+            dotItems.forEach((item) => item.classList.remove("active"));
+
+            // then add the 'active' class to the clicked item
+            this.classList.add("active");
+
+            // get the current's li data-index attribute value
+            const currentIndex = e.target.getAttribute("data-index");
+
+            // pass the index to the setData function
+            setData(currentIndex);
+        });
+    });
+
 });
 
 // FUNCTIONS
