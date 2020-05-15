@@ -13,3 +13,10 @@ const data = [{
         url: "https://github.com"
     }
 ];
+
+// query the DOM and create variables
+const photo = document.querySelector(".card__image");
+const category = document.querySelector(".card__category");
+const title = document.querySelector(".card__title");
+const cta = document.querySelector(".card__cta-link");
+const dots = document.querySelector("#dots-list");
